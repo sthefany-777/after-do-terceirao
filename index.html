@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>After do Terceirão | 19 de Dezembro</title>
+
+  <meta
+    name="description"
+    content="After do Terceirão — 19 de dezembro no Sítio Colina. Tema Neon."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
+
+  <header>
+    <div class="logo">AFTER<span>+</span></div>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#ingressos">Ingressos</a>
+      <a href="#informacoes">Informações</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+      <div class="hero-content">
+
+        <p class="tag">✨ O AFTER MAIS ESPERADO DO TERCEIRÃO ✨</p>
+
+        <h1>
+          AFTER<br>
+          <span>DO TERCEIRÃO</span>
+        </h1>
+
+        <p class="description">
+          Uma noite de muita música, diversão e energia neon
+          para fechar essa fase do jeito que merece.
+        </p>
+
+        <div class="event-info">
+          <div>
+            <strong>19</strong>
+            <span>DEZEMBRO</span>
+          </div>
+
+          <div>
+            <strong>📍</strong>
+            <span>SÍTIO COLINA<br>ABERTÃO</span>
+          </div>
+        </div>
+
+        <a href="#ingressos" class="button">
+          COMPRAR INGRESSO
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- INGRESSOS -->
+    <section class="tickets" id="ingressos">
+
+      <p class="section-tag">🎟️ GARANTA O SEU</p>
+
+      <h2>ESCOLHA SEU <span>INGRESSO</span></h2>
+
+      <div class="ticket-container">
+
+        <div class="ticket-card">
+          <div class="ticket-icon">♂</div>
+
+          <h3>Masculino</h3>
+
+          <div class="price">
+            <small>R$</small>20<span>,00</span>
+          </div>
+
+          <p>Ingresso masculino</p>
+
+          <button
+            class="buy-button"
+            onclick="selecionarIngresso('Masculino', 20)"
+          >
+            COMPRAR
+          </button>
+        </div>
+
+
+        <div class="ticket-card female">
+
+          <div class="ticket-icon">♀</div>
+
+          <h3>Feminino</h3>
+
+          <div class="price">
+            <small>R$</small>10<span>,00</span>
+          </div>
+
+          <p>Ingresso feminino</p>
+
+          <button
+            class="buy-button"
+            onclick="selecionarIngresso('Feminino', 10)"
+          >
+            COMPRAR
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMPRA -->
+    <section class="purchase" id="compra">
+
+      <div class="purchase-box">
+
+        <p class="section-tag">🪩 RESERVE SEU INGRESSO</p>
+
+        <h2>FINALIZE SUA <span>COMPRA</span></h2>
+
+        <form id="purchaseForm">
+
+          <label for="nome">Nome completo</label>
+          <input
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome"
+            required
+          >
+
+          <label for="whatsapp">WhatsApp</label>
+          <input
+            type="tel"
+            id="whatsapp"
+            placeholder="(35) 99999-9999"
+            required
+          >
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="seuemail@email.com"
+            required
+          >
+
+          <label for="tipo">Tipo de ingresso</label>
+
+          <select id="tipo" required>
+            <option value="">Selecione</option>
+            <option value="Masculino">Masculino — R$ 20,00</option>
+            <option value="Feminino">Feminino — R$ 10,00</option>
+          </select>
+
+          <label for="quantidade">Quantidade</label>
+
+          <input
+            type="number"
+            id="quantidade"
+            min="1"
+            max="10"
+            value="1"
+            required
+          >
+
+          <div class="total">
+            <span>Total</span>
+            <strong id="total">R$ 0,00</strong>
+          </div>
+
+          <button type="submit" class="confirm-button">
+            CONTINUAR PARA PAGAMENTO
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- PIX -->
+    <section class="pix" id="pix">
+
+      <div class="pix-box">
+
+        <div class="pix-symbol">PIX</div>
+
+        <h2>PAGAMENTO VIA <span>PIX</span></h2>
+
+        <p>
+          Depois de preencher seus dados, o pedido será criado.
+          O pagamento será feito através de Pix.
+        </p>
+
+        <div id="pedido"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INFORMAÇÕES -->
+    <section class="information" id="informacoes">
+
+      <p class="section-tag">📍 SOBRE O EVENTO</p>
+
+      <h2>INFORMAÇÕES</h2>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <div>📅</div>
+          <h3>Data</h3>
+          <p>19 de dezembro de 2026</p>
+        </div>
+
+        <div class="info-card">
+          <div>📍</div>
+          <h3>Local</h3>
+          <p>Sítio Colina — Abertão</p>
+        </div>
+
+        <div class="info-card">
+          <div>🌈</div>
+          <h3>Tema</h3>
+          <p>Neon</p>
+        </div>
+
+        <div class="info-card">
+          <div>💳</div>
+          <h3>Pagamento</h3>
+          <p>Pix</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-logo">
+      AFTER<span>+</span>
+    </div>
+
+    <p>AFTER DO TERCEIRÃO • 19.12.2026</p>
+
+    <p class="copyright">
+      Evento organizado pelos alunos do 3º ano noturno.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
