@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(57, 255, 20, 0.12),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 90% 25%,
+            rgba(255, 0, 140, 0.14),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(255, 230, 0, 0.10),
+            transparent 30%
+        ),
+
+        #020202;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   LUZES
+========================= */
+
+.neon-light {
+
+    position: fixed;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: 0.22;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.green-light {
+
+    background: #39ff14;
+
+    left: -140px;
+    top: 5%;
+}
+
+
+.pink-light {
+
+    background: #ff008c;
+
+    right: -140px;
+    top: 35%;
+}
+
+
+.yellow-light {
+
+    background: #ffe600;
+
+    left: 35%;
+    bottom: -180px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(900px, 92%);
+
+    margin: auto;
+
+    min-height: 100vh;
+
+    padding: 55px 20px 50px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   DATA DO TOPO
+========================= */
+
+.top-date {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    color: #39ff14;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 5px #39ff14,
+        0 0 15px #39ff14,
+        0 0 30px #39ff14;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+h1 {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    font-family: 'Orbitron', sans-serif;
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+}
+
+
+.after {
+
+    color: #ff008c;
+
+    font-size: clamp(30px, 7vw, 60px);
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 5px #ff008c,
+        0 0 15px #ff008c,
+        0 0 35px #ff008c;
+}
+
+
+.terceirao {
+
+    color: #39ff14;
+
+    font-size: clamp(50px, 12vw, 110px);
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    text-shadow:
+        0 0 5px #39ff14,
+        0 0 15px #39ff14,
+        0 0 35px #39ff14,
+        0 0 70px rgba(57,255,20,0.6);
+}
+
+
+.noturno {
+
+    color: #ffe600;
+
+    font-size: clamp(35px, 8vw, 70px);
+
+    font-weight: 900;
+
+    margin-top: 8px;
+
+    text-shadow:
+        0 0 5px #ffe600,
+        0 0 15px #ffe600,
+        0 0 35px #ffe600;
+}
+
+
+/* =========================
+   DATA
+========================= */
+
+.date-box {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 12px 25px;
+
+    border: 2px solid #ff008c;
+
+    border-radius: 30px;
+
+    color: #fff;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 8px #ff008c,
+        0 0 20px rgba(255,0,140,0.6);
+
+    background: rgba(255,0,140,0.04);
+}
+
+
+/* =========================
+   FRASE
+========================= */
+
+.phrase {
+
+    margin-top: 28px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    font-weight: 500;
+
+    color: #fff;
+}
+
+
+/* =========================
+   BOTÃO MEU INGRESSO
+========================= */
+
+.ticket-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    width: min(620px, 100%);
+
+    margin: 35px auto 50px;
+
+    padding: 22px 25px;
+
+    border: 2px solid #ff008c;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,0,140,0.12),
+            rgba(57,255,20,0.08)
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: clamp(22px, 5vw, 34px);
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 8px #ff008c,
+        0 0 25px rgba(255,0,140,0.6),
+        inset 0 0 20px rgba(255,0,140,0.08);
+
+    transition: 0.3s;
+}
+
+
+.ticket-button:hover {
+
+    transform: translateY(-4px) scale(1.02);
+
+    border-color: #39ff14;
+
+    box-shadow:
+        0 0 10px #39ff14,
+        0 0 35px rgba(57,255,20,0.7);
+}
+
+
+.ticket-icon {
+
+    color: #ffe600;
+
+    font-size: 30px;
+
+    text-shadow:
+        0 0 8px #ffe600,
+        0 0 20px #ffe600;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.information {
+
+    width: min(650px, 100%);
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    padding: 18px 22px;
+
+    background: rgba(10,10,10,0.85);
+
+    border-radius: 14px;
+
+    border: 1px solid;
+
+    transition: 0.3s;
+}
+
+
+.info-item:hover {
+
+    transform: translateX(5px);
+}
+
+
+.info-item.pink {
+
+    border-color: #ff008c;
+
+    box-shadow:
+        0 0 10px rgba(255,0,140,0.4);
+}
+
+
+.info-item.green {
+
+    border-color: #39ff14;
+
+    box-shadow:
+        0 0 10px rgba(57,255,20,0.4);
+}
+
+
+.info-item.yellow {
+
+    border-color: #ffe600;
+
+    box-shadow:
+        0 0 10px rgba(255,230,0,0.4);
+}
+
+
+.info-icon {
+
+    width: 55px;
+
+    font-size: 30px;
+
+    text-align: center;
+
+    margin-right: 15px;
+}
+
+
+.star {
+
+    color: #ffe600;
+
+    font-size: 32px;
+
+    text-shadow:
+        0 0 8px #ffe600;
+}
+
+
+.info-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.info-text small {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #aaa;
+
+    font-weight: 700;
+}
+
+
+.info-text strong {
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+}
+
+
+.pink strong {
+
+    color: #ff008c;
+
+    text-shadow:
+        0 0 8px #ff008c;
+}
+
+
+.green strong {
+
+    color: #39ff14;
+
+    text-shadow:
+        0 0 8px #39ff14;
+}
+
+
+.yellow strong {
+
+    color: #ffe600;
+
+    text-shadow:
+        0 0 8px #ffe600;
+}
+
+
+/* =========================
+   INGRESSO
+========================= */
+
+.ticket-section {
+
+    margin-top: 75px;
+}
+
+
+.ticket-section h2 {
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 25px;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 8px #ff008c,
+        0 0 20px #ff008c;
+}
+
+
+.ticket-card {
+
+    max-width: 520px;
+
+    margin: auto;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    border: 1px solid #39ff14;
+
+    background: rgba(10,10,10,0.9);
+
+    box-shadow:
+        0 0 10px rgba(57,255,20,0.6),
+        inset 0 0 25px rgba(57,255,20,0.05);
+}
+
+
+.ticket-title {
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-weight: 800;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+}
+
+
+.ticket-price {
+
+    margin: 15px 0;
+
+    font-size: 50px;
+
+    font-weight: 900;
+
+    color: #ffe600;
+
+    text-shadow:
+        0 0 8px #ffe600,
+        0 0 25px #ffe600;
+}
+
+
+.ticket-card p {
+
+    color: #aaa;
+
+    margin-bottom: 25px;
+}
+
+
+.buy-button {
+
+    display: block;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #ff008c;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 0 10px #ff008c,
+        0 0 25px rgba(255,0,140,0.6);
+
+    transition: 0.3s;
+}
+
+
+.buy-button:hover {
+
+    transform: scale(1.03);
+
+    background: #39ff14;
+
+    color: #000;
+
+    box-shadow:
+        0 0 10px #39ff14,
+        0 0 30px #39ff14;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+
+    margin-top: 65px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #39ff14;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+
+    text-shadow:
+        0 0 8px #39ff14;
+}
+
+
+.loading-circle {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(255,255,255,0.1);
+
+    border-top-color: #ff008c;
+
+    border-right-color: #39ff14;
+
+    border-bottom-color: #ffe600;
+
+    animation: spin 1.2s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+    color: #777;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    border-top: 1px solid rgba(255,0,140,0.3);
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: 94%;
+
+        padding-top: 45px;
+    }
+
+
+    .top-date {
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .terceirao {
+
+        letter-spacing: -3px;
+    }
+
+
+    .date-box {
+
+        font-size: 13px;
+
+        padding: 10px 17px;
+    }
+
+
+    .phrase {
+
+        font-size: 15px;
+    }
+
+
+    .ticket-button {
+
+        padding: 19px 15px;
+
+        font-size: 21px;
+
+        gap: 10px;
+    }
+
+
+    .ticket-icon {
+
+        font-size: 25px;
+    }
+
+
+    .info-item {
+
+        padding: 16px;
+    }
+
+
+    .info-icon {
+
+        width: 45px;
+
+        margin-right: 8px;
+
+        font-size: 26px;
+    }
+
+
+    .info-text strong {
+
+        font-size: 14px;
+    }
+
+
+    .info-text small {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .ticket-price {
+
+        font-size: 43px;
+    }
+
+}
